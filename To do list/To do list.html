@@ -1,0 +1,119 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <link href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans+TC|Open+Sans|Roboto+Condensed" rel="stylesheet"> 
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<title>TO DO LIST</title>
+	<link rel="stylesheet" type="text/css" href="doDoStyle.css">
+</head>
+<body>
+	<div id="container">
+		<h1>My To Do Items</h1>
+		<div class="topOfTheBox">
+			<div class="deleteCheked">DELETE CHECKED ITEM</div>
+			<div class="sortPrio">SORT BY PRIORITY</div>
+			<div class="sortDate">SORT BY DUE DATE</div>
+			<div class="recent">RECENT</div>
+			<div class="addItem">ADD NEW TO DO ITEM</div>
+		</div>
+		<div class="clear"></div>
+
+
+		<form class="addItemBox">
+			
+			<span class="addCls"><h2>Add a new item</h2></span>
+			<div class="clear"></div>
+
+			<label name="itemName">Item Name</label>	<input class="addIntp inputName" type="text" name="itemName" placeholder="Enter Your Item Name" required>
+
+			<label name="dueDate">Due Date</label>	<input class="addIntp inputDate" type="date" name="dueDate" required>
+
+			<label name="details">Details</label>	<textarea class="addIntp inputDetail" type="text" name="details" placeholder="Enter Your Details" required></textarea>
+
+			<label name="prio">Priority</label>
+			<select class="addIntp add__type" name="prio">
+                    <option value="Highest">Highest</option>
+                    <option value="High" >High</option>
+                    <option value="Medium" selected>Middle</option>
+                    <option value="Low" >Low</option>
+                    <option value="Lowest">Lowest</option>
+            </select>
+
+            <div class="add-cncl">
+            	<button type="submit" id="additem">Add Item</button>
+            	<button type="submit" class="ok displ">Ok</button>
+            	<button id="cancel">Cancel</button>
+            </div>
+		</form>
+	</div>
+		<div class="content">
+			<div class="listItem" id="item-10001">
+				<div class="topLine" >
+						<button class='priorityBtn' style='background-color:#29abe0'>Low</button>
+
+						<span id="title">Tittle</span> --- 
+						<span id="detail">Content</span>
+				</div>
+
+				<div class="bottomLine">
+					<div class="editOption">
+						<span>Due : 2019-01-17</span>
+
+	 					<label class="rmck">
+								<input id="removeCk" class="deleteBtn" type="checkbox" name="complete" >
+								 Remove
+								 <!-- <i class="far fa-trash-alt deleteItem"></i> -->
+						</label>
+
+	 					<i id="editItem-1002" class="far fa-edit deleteItem"> Edit</i>					
+						
+						<label  class="deleteItem cmpl">
+							<input id="cheking" type="checkbox" value="0" name="complete" >
+							Complete
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="listItem" id="item-10002">
+				<div class="topLine">
+						<button class="priorityBtn" style='background-color:#f47c3c'>High</button>
+
+						<span id="title">Tittle2</span> --- 
+						<span id="detail">Content2</span>
+				</div>
+
+				<div class="bottomLine">
+					<div class="editOption">
+						<span>Due : 2019-01-18</span>
+	 					
+	 					<label class="deleteItem rmck">
+								<input id="removeCk" class="deleteBtn" type="checkbox" value="0" name="complete" >
+								 Remove
+								 <!-- <i class="far fa-trash-alt deleteItem"></i> -->
+						</label>
+
+	 					<i id="editItem-1001" class="far fa-edit deleteItem"> Edit</i>
+
+							<label class="deleteItem cmpl">
+								<input id="cheking" type="checkbox" value="0" name="complete" >
+								Complete
+							</label>
+
+					</div>
+				</div>
+			</div>
+		</div>	
+		
+	
+        <div class="deletepop displ">
+            	<h1><i class="fas fa-exclamation-triangle"></i></h1>
+            	<h2>Are You Sure?</h2>
+            	<p>Do You Whant Remove Checked Items</p>
+            	<button class="cncl">Cancel</button> <button class="confDelete">Delete</button>
+        </div>
+	<div class="pageCover"></div>
+</body>
+ <script type="text/javascript" src="toDoCntrl.js"></script> 
+</html>
